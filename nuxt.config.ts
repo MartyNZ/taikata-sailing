@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/hints',
     '@nuxt/image',
     '@nuxt/scripts',
-    '@nuxt/ui'
+    '@nuxt/ui',
+    '@nuxtjs/sanity'
   ]
 })
