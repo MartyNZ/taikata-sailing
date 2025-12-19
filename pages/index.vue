@@ -5,7 +5,7 @@ const settings = data.settings;
 <template>
   <NuxtLayout name="homepage">
   <div>
-    <pre>{{ settings }}</pre>
+      <app-settings />
   </div>
   </NuxtLayout>
 </template>

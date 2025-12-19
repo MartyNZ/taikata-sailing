@@ -17,6 +17,28 @@ export const qrySiteSettings = groq`
       },
     }
   },
+  fontPrimary,
+  fontSecondary,
+  'color':{
+    'surface':{
+      'dark':{
+        'hex': clrDark.hex,
+        'rgb': clrDark.rgb,
+      },
+      'light':{
+        'hex': clrLight.hex,
+        'rgb': clrLight.rgb
+      }
+    },
+    'primary':{
+      'hex': clrPrimary.hex,
+      'rgb': clrPrimary.rgb
+    },
+    'secondary':{
+      'hex': clrSecondary.hex,
+      'rgb': clrSecondary.rgb
+    }
+  },
   seo{
     title,
     image{
