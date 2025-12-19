@@ -2,7 +2,14 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ["@nuxtjs/sanity", '@pinia/nuxt', "@vite-pwa/nuxt", "@nuxt/fonts"],
+  modules: [
+    '@nuxtjs/sanity',
+    '@pinia/nuxt',
+    '@vite-pwa/nuxt',
+    '@nuxt/fonts',
+    '@nuxt/ui',
+  ],
+  css:['~/assets/css/main.css'],
   pwa: {
     registerType: "autoUpdate",
     manifest: {

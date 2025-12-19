@@ -40,7 +40,7 @@ useHead(() => ({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/assets/images/favicon.png'
+      href: '/assets/images/favicon.ico'
     }
   ]
 }));
@@ -53,10 +53,10 @@ router.afterEach(() => {
 });
 </script>
 <template>
-  <div>
+  <UApp>
     <NuxtRouteAnnouncer />
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-  </div>
+  </UApp>
 </template>

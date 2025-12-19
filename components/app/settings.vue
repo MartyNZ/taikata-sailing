@@ -12,8 +12,10 @@ const settings = siteSettings.settings;
       <div class="theme-colour colour-surface-dark">Surface Dark<br/>{{ settings.color?.surface?.dark?.hex }}</div>
     </div>
     <div id="theme-fonts">
-      <div class="theme-font font-primary">Primary Font: {{ settings.fontPrimary }}</div>
-      <div class="theme-font font-secondary">Secondary Font: {{ settings.fontSecondary }}</div>
+      <div class="theme-font font-primary">Primary Font: <h2>{{ settings.fontPrimary }}</h2>
+      </div>
+      <div class="theme-font font-secondary">Secondary Font: <p>{{ settings.fontSecondary }}</p>
+      </div>
     </div>
   </div>
 </template>
