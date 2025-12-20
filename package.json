@@ -20,6 +20,8 @@
     "vue-router": "4.6.4"
   },
   "devDependencies": {
+    "@iconify-json/fa6-brands": "^1.2.6",
+    "@iconify-json/solar": "^1.2.5",
     "@nuxt/fonts": "0.12.1",
     "@nuxt/icon": "1.15.0",
     "@nuxt/ui": "3.3.7",

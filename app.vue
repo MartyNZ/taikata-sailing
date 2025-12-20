@@ -30,6 +30,9 @@ const themeStyles = computed(() => {
 });
 
 useHead(() => ({
+  meta: [
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+  ],
   style: [
     {
       innerHTML: themeStyles.value
@@ -55,8 +58,10 @@ router.afterEach(() => {
 <template>
   <UApp>
     <NuxtRouteAnnouncer />
+    <app-header />
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
+    <app-footer />
   </UApp>
 </template>

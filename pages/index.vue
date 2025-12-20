@@ -1,11 +1,9 @@
 <script setup>
-const data = useSiteSettingsStore();
-const settings = data.settings;
 </script>
 <template>
   <NuxtLayout name="homepage">
-  <div>
+    <UContainer>
       <app-settings />
-  </div>
+    </UContainer>
   </NuxtLayout>
 </template>
