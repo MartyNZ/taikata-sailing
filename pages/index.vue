@@ -1,10 +1,20 @@
 <script setup>
+import { qryArticleLatest } from '~/queries/articles';
+
+const { data: articles } = await useSanityQuery(qryArticleLatest);
 </script>
 <template>
+ <div>
+
   <NuxtLayout name="homepage">
-    <UContainer>
+     <main class="@container mx-auto mb-16 max-w-[1280px] px-4">
+ 
      <app-banner />
+       <article-list :articles="articles" />
+
       <app-settings />
-    </UContainer>
+     </main>
+
   </NuxtLayout>
+ </div>
 </template>

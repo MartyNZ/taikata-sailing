@@ -1,0 +1,71 @@
+<script setup>
+// const settings = useSiteSettingsStore().settings
+import { qryArticlesSection, qryArticles } from '~/queries/articles'
+
+const data = useSiteSettingsStore();
+const settings = data.settings;
+
+const isLoadingArticlesSection = ref(true)
+const { data: articlesSection } = await useSanityQuery(qryArticlesSection).finally(() => {
+  isLoadingArticlesSection.value = false
+});
+
+// console.log("Articles Section: ", JSON.stringify(articlesSection.value, null, 2))
+const isLoadingArticles = ref(true)
+const { data: articles } = await useSanityQuery(qryArticles).finally(() => {
+  isLoadingArticles.value = false
+});
+// console.log("Articles: ", JSON.stringify(articles.value, null, 2))
+
+useSeoMeta({
+  title: computed(() => articlesSection.value?.title || ''),
+  description: computed(() => articlesSection.value?.description || ''),
+  ogTitle: computed(() => articlesSection.value?.title || ''),
+  ogDescription: computed(() => articlesSection.value?.description || ''),
+  ogImage: computed(() => articlesSection.value?.image?.asset?.url || ''),
+  twitterTitle: computed(() => articlesSection.value?.title || ''),
+  twitterDescription: computed(() => articlesSection.value?.description || ''),
+  twitterImage: computed(() => articlesSection.value?.image?.asset?.url || ''),
+  twitterCard: "summary_large_image",
+});
+
+definePageMeta({
+  layout: false,
+});
+
+// const siteSettings = computed(() => ({
+//   title: data.settings?.title || '',
+//   description: data.settings?.description || '',
+//   image: data.settings?.image || '',
+//   siteName: data.settings?.title || '',
+//   icon: data.settings?.logoUrl || ''
+// }))
+// defineOgImageComponent('default', siteSettings.value)
+
+</script>
+<template>
+  <NuxtLayout name="internal">
+    <template #main>
+      <div id="article-main" class="container mx-auto p-4 md:p-6">
+        <div id="page-layout">
+          <section id="articles-list" class="articles">
+
+              <h2>{{ articlesSection.title }}</h2>
+              <p class="mb-8">{{ articlesSection.description }}</p>
+            <article-list :articles="articles" :loading="isLoadingArticles" />
+          </section>
+        </div>
+      </div>
+    </template>
+    <template #sidebar>
+      <div class="sticky top-[95px] mx-3 grid grid-cols-1 @2xl:grid-cols-2 @md:gap-3">
+        <div class="hidden sm:pb-8 md:block">
+          <article-collection-navigation />
+        </div>
+        <div class="pb-8 place-content-center">
+          <article-sidebar-latest number="4" />
+        </div>
+      </div>
+    </template>
+  </NuxtLayout>
+</template>

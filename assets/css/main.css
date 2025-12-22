@@ -1,2 +1,81 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+@theme static {
+  --font-sans: 'Public Sans', sans-serif;
+
+  --breakpoint-3xl: 1920px;
+
+  --color-primary-50: #FCFCFE;
+  --color-primary-100: #E8E6F9;
+  --color-primary-200: #BDB9EE;
+  --color-primary-300: #978EE4;
+  --color-primary-400: #7264D8;
+  --color-primary-500: #4C37BD;
+  --color-primary-600: #2E2079;
+  --color-primary-700: #241862;
+  --color-primary-800: #1A114C;
+  --color-primary-900: #100935;
+  --color-primary-950: #0A0528;
+
+  --color-secondary-50: #FFFFFF;
+  --color-secondary-100: #FFFFFF;
+  --color-secondary-200: #FCEDED;
+  --color-secondary-300: #F9D8D8;
+  --color-secondary-400: #F6C2C3;
+  --color-secondary-500: #F4AFB0;
+  --color-secondary-600: #F29899;
+  --color-secondary-700: #EE3E42;
+  --color-secondary-800: #A22326;
+  --color-secondary-900: #590F11;
+  --color-secondary-950: #380607;
+
+  --color-surface-50: #FCFCFE;
+  --color-surface-100: #E8E6F9;
+  --color-surface-200: #BDB9EE;
+  --color-surface-300: #978EE4;
+  --color-surface-400: #7264D8;
+  --color-surface-500: #4C37BD;
+  --color-surface-600: #2E2079;
+  --color-surface-700: #241862;
+  --color-surface-800: #1A114C;
+  --color-surface-900: #100935;
+  --color-surface-950: #0A0528;
+}
+
+.sanity-content {
+  text-align: justify;
+
+  p {
+    margin-bottom: 1.25em;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin: 1rem 0;
+    padding-left: 2rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+    margin: 1rem 0;
+    padding-left: 2rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  blockquote {
+    border-left: 4px solid var(--primary-400);
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    color:var(--surface-800);
+    background: var(--surface-100);
+    font-style: italic;
+  }
+}

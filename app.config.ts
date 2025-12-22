@@ -1,11 +1,13 @@
 export default defineAppConfig({
   ui: {
-    container: {
-      base: "w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8",
-    },
     primary: "primary",
     secondary: "secondary",
-    gray: "surface-dark",
+    gray: "surface",
+    container: {
+      constrained: "max-w-7xl",
+    },
   },
 });
+
+
 

@@ -1,7 +1,7 @@
 <template>
   <header
-    class="bg-surface-light shadow-surface-400 dark:bg-surface-dark dark:shadow-surface-700 sticky top-0 z-30 shadow-sm">
-    <div class="bg-surface-200 dark:bg-surface-800 dark:text-surface-100 w-full">
+class="bg-surface-50 shadow-gray-400 dark:bg-surface-950 dark:shadow-gray-700 sticky top-0 z-30 shadow-sm">
+    <div class="w-full">
       <div class="mx-auto flex max-w-[1280px] flex-wrap items-center justify-between px-2 py-2 md:px-4">
         <AppBrand />
         <div class="flex items-center gap-1 md:gap-3 justify-self-end ml-auto">

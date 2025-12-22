@@ -9,9 +9,9 @@ const props = defineProps({
 });
 </script>
 <template>
-  <div class="bg-surface-dark w-full pb-2 border-t-surface-dark">
+ <div class="bg-surface-950 w-full pb-2 border-t-surface-dark">
     <div
-      class="text-surface-light mx-auto max-w-[1280px] px-6 py-1 text-xs font-semibold md:flex md:items-center md:justify-between">
+     class="text-surface-50 mx-auto max-w-[1280px] px-6 py-1 text-xs font-semibold md:flex md:items-center md:justify-between">
       <div class="py-1 text-center md:text-left">
         <span>© {{ year }} Copyright: </span>
         {{ siteOwner }}

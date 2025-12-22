@@ -6,10 +6,13 @@ const settings = siteSettings.settings;
   <div id="settings">
     <h3>Theme</h3>
     <div id="theme-colours">
-      <div class="theme-colour colour-primary">Primary<br/>{{ settings.color?.primary?.hex }}</div>
-      <div class="theme-colour colour-secondary">Secondary<br/>{{ settings.color?.secondary?.hex }}</div>
-      <div class="theme-colour colour-surface-light">Surface Light<br/>{{ settings.color?.surface?.light?.hex }}</div>
-      <div class="theme-colour colour-surface-dark">Surface Dark<br/>{{ settings.color?.surface?.dark?.hex }}</div>
+     <div class="theme-colour bg-primary-500 text-surface-50">Primary<br />{{ settings.color?.primary?.hex }}</div>
+      <div class="theme-colour bg-secondary-500 text-surface-950">Secondary<br />{{ settings.color?.secondary?.hex }}
+      </div>
+      <div class="theme-colour bg-surface-50 text-surface-950">Surface Light<br />{{ settings.color?.surface?.light?.hex
+      }}</div>
+      <div class="theme-colour bg-surface-950 text-surface-50">Surface Dark<br />{{ settings.color?.surface?.dark?.hex
+      }}</div>
     </div>
     <div id="theme-fonts">
       <div class="theme-font font-primary">Primary Font: <h2>{{ settings.fontPrimary }}</h2>
@@ -42,29 +45,4 @@ const settings = siteSettings.settings;
     justify-self: center;
   }
 
-  .font-primary {
-    font: var(--font-primary);
-    font-size: large;
-  }
-
-  .font-secondary {
-    font-family: var(--font-secondary), 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
-
-  .colour-primary {
-    color: var(--color-secondary);
-    background-color: var(--color-primary);
-  }
-  .colour-secondary {
-    color: var(--color-primary);
-    background-color: var(--color-secondary);
-  }
-  .colour-surface-light {
-    color: var(--color-surface-dark);
-    background-color: var(--color-surface-light);
-  }
-  .colour-surface-dark {
-    color: var(--color-surface-light);
-    background-color: var(--color-surface-dark);
-  }
 </style>
